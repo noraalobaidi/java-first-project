@@ -10,7 +10,8 @@ public class Test {
 	public static void main(String[] args) {
 		Test user = new Test();
 //		user.createFile();
-		user.sortByName();
+//		user.sortByName();
+		user.searchFile();
 	}
 	
 	public void createFile() {
@@ -36,9 +37,19 @@ public class Test {
 		
 	}
 	
-	public void sortByName () {
+	public String[] getAllFiles(){
+		
 		File directoryPath = new File("../java-first-project/files/");
 		String [] arr=directoryPath.list();
+		
+		return arr;
+		
+		
+		
+	}
+	
+	public void sortByName () {
+		String [] arr=getAllFiles();
 		ArrayList<String> array = new ArrayList();
 
 		for(String file:arr) {array.add(file);}
@@ -49,4 +60,33 @@ public class Test {
 		for(String file :array) {System.out.println(file);}
 		 
 	}
+	
+	public void searchFile() {
+		Scanner input = new Scanner(System.in);
+		int flag=0;
+		
+		String [] arrOfAllFiles=getAllFiles();
+		ArrayList<String> array = new ArrayList();
+		for(String file:arrOfAllFiles) {array.add(file);}
+		
+		System.out.print("Enter the name of the file:");
+		String searchfile= input.nextLine();
+		
+		for (String f:arrOfAllFiles) {
+			
+			if (searchfile.toLowerCase().equals(f.toLowerCase()))
+			{
+				System.out.println("File "+f+" is found");
+				return;
+			}
+			
+				
+			
+		}
+		
+		
+		
+		
+	}
+	
 }
