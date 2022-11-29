@@ -63,7 +63,6 @@ public class Test {
 	
 	public void searchFile() {
 		Scanner input = new Scanner(System.in);
-		int flag=0;
 		
 		String [] arrOfAllFiles=getAllFiles();
 		ArrayList<String> array = new ArrayList();
@@ -79,11 +78,8 @@ public class Test {
 				System.out.println("File "+f+" is found");
 				return;
 			}
-			
-				
-			
 		}
-		
+		System.out.println("File "+searchfile+" not found");
 		
 		
 		
