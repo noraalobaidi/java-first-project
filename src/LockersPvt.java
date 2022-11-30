@@ -5,14 +5,17 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class LockersPvt {
+public class LockersPvt extends Thread{
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		LockersPvt user = new LockersPvt();
 		MainMenu menu = new MainMenu();
 		int opt;
-		
+		new WelcomePage().welcomePage();
+//		LockersPvt thread = new LockersPvt();
+//		thread.start();
+		Thread.sleep(3000);
 		do {
 			menu.displayMenu();
 			opt = menu.getOpt();

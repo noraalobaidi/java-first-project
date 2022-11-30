@@ -124,4 +124,18 @@ public int getOpt() {
 	 
 	 
  }
+ class WelcomePage{
+	 
+	 void welcomePage() {
+		 System.out.println("\n\n  *************************************************");
+		 System.out.println("  *                                               *");
+		 System.out.println("  *                 LockedMe.com                  *");
+		 System.out.println("  *                                               *");
+		 System.out.println("  *           Developed by Nora AlObaidi          *");
+		 System.out.println("  *                                               *");
+		 System.out.println("  *                                               *");
+		 System.out.println("  *************************************************");
+		 
+	 }
+ }
  
