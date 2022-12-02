@@ -58,6 +58,11 @@ public int getOpt() {
 			while(option!=4);
 			break;
 		case 3:
+			System.out.println("\n\n  *************************************************");
+			 System.out.println("  *                                               *");
+			 System.out.println("  *       Thank you for using LockedMe.com        *");
+			 System.out.println("  *                                               *");
+			 System.out.println("  *************************************************");
 			System.exit(0);
 			break;
 		default:

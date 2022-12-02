@@ -96,7 +96,7 @@ public class LockersPvt extends Thread{
 		
 		for (String f:array) {
 			
-			if (searchfile.toLowerCase().equals(f.toLowerCase()))
+			if (searchfile.equals(f))
 			{
 				System.out.println("   File "+f+" was found");
 //				System.out.println("  *********************");
@@ -125,7 +125,7 @@ public class LockersPvt extends Thread{
 		
 		for (String f:array) {
 			
-			if (searchfile.toLowerCase().equals(f.toLowerCase()))
+			if (searchfile.equals(f))
 			{
 				File fileToDelete= new File("../java-first-project/files/"+f);
 				if (fileToDelete.delete())
